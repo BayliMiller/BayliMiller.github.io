@@ -1,0 +1,287 @@
+/*--- this sections takes care of the 6 tabs.
+text align centers the tabs on the page 
+list-style:none, removes bullet 
+
+*/
+
+.tabs {
+	list-style-type: none;
+	padding:2;
+	margin:0;
+	position:relative;
+	text-align: center;
+	font-family:Segoe UI;
+	font-size:10pt;
+	
+}
+
+
+/*--- if you remove just the FONT code and leave padding from below, the tab would be different. They would be so far away
+
+Tabs li helps us to format within the above tab
+
+*/
+
+.tabs li {
+  display: inline;
+  padding-right: 10px;
+	
+}
+
+
+
+
+.tabs li > input{
+	display:none;
+}
+
+/*--- color black gives black color on tab text; border bottom/top implies  line on top and bottom of the tab:
+
+border-bottom:5px solid #000000;
+	border-top:5px solid #000000;
+*/
+
+.tabs li > label {
+	display:inline-block;
+	height:3px;
+	line-height:30px;
+	padding:10px 10px;
+	cursor:crosshair;
+	color: black;
+		 
+}
+
+
+
+/*--- text-align puts our paragraph within each text to left 
+Margin left gives my paragraph certain 'cm' away from left
+*/
+
+.tabs .tab-content{
+	display:none;
+	position:absolute;
+	text-align:justify;
+	margin-right:10cm;
+	margin-left:10cm;
+	width:800px;
+	
+
+}
+
+
+
+/*--- Instead of just color in the code below, we can do background-color:#5BC85B, to get box green (instead of just text
+green) when tab is selected*/
+
+.tabs li> input:checked + label {
+	color:red;
+}
+	
+.tabs li > input:checked ~ .tab-content {
+	display:block;
+}	
+
+/*--- We have the following code because in HTML we have img as circle */
+.img-circle {
+    border-radius:80%;
+	margin-right:20px;
+	margin-left:20px;
+}
+
+
+/*--- We have the following code because in HTML we used box in Reviews section
+
+Height increases height; widht increase width of box; padding increases where to start text*/
+.boxreview {
+  width: 700px;
+    height: 100px;
+	background: url(mark.jpg) no-repeat transparent;
+	padding: 3px;
+	background-size: 15px 15px;    
+    
+    text-align: left;
+	     border: 1px solid maroon;
+}
+
+/*--- I have footer code in html and the following code accompnys that */
+
+.footer {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 2rem;
+  text-align: center;
+
+}
+
+.input[type=text] {
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+/* Continuing from above footer ---When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
+    width: 100%;
+}
+
+p.search {
+    margin-right: 10cm;
+}
+
+
+/* Following code is for the HTML code for DIV side by side in Contacts. We can put border around it. border:1px solid red; But I decided not to*/
+#parent_div_1, #parent_div_2, #parent_div_3{
+    width:200px;
+    height:100px;
+	float:left;
+}
+.child_div_1{
+    float:left;
+	    }
+
+
+div.sidebar {
+    border:ridge;
+    position:inherit;
+    top:2%;
+   	margin-left:18cm;
+}
+
+
+h1,
+h2,
+h3 {
+  font-weight: 300;
+}
+
+.container {
+  ;
+  padding-right: 11em;
+}
+
+.timeline {
+  position:relative;
+  overflow: auto;
+}
+.timeline:before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 5px;
+  background: #dddddd;
+  left: 0;
+}
+.timeline h2 {
+  background: #dddddd;
+  max-width: 6em;
+  margin: 0 auto 1em;
+  padding: 0.5em;
+  text-align: center;
+  position: relative;
+  clear: both;
+}
+.timeline ul {
+  list-style: none;
+  padding: 0 0 0 1em;
+  z-index: 1;
+}
+.timeline li {
+  background: #dddddd;
+  padding: 1em;
+  margin-bottom: 1em;
+  position: relative;
+}
+.timeline li:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 1em solid #dddddd;
+  border-left: 1em solid transparent;
+  position: absolute;
+  left: -1em;
+  top: 0;
+}
+.timeline h3 {
+  margin-top: 0;
+}
+.timeline time {
+  font-style: italic;
+}
+
+@media screen and (min-width: 40em) {
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .timeline:before {
+    left: 50%;
+  }
+  .timeline ul {
+    padding-left: 0;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .timeline li {
+    width: 42%;
+  }
+  .timeline li:nth-child(even) {
+    float: right;
+    margin-top: 2em;
+  }
+  .timeline li:nth-child(odd) {
+    float: left;
+  }
+  .timeline li:nth-child(odd):before {
+    border-top: 1em solid #dddddd;
+    border-right: 1em solid transparent;
+    right: -1em;
+    left: auto;
+  }
+  .timeline li:nth-of-type(2n+1) {
+    clear: both;
+  }
+}
+
+
+.ccontainer {
+    position: relative;
+    width: 50%;
+	margin-left:35%; 
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.ccontainer:hover .image {
+  opacity: 0.3;
+}
+
+.ccontainer:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color:#FFFFFF;
+  color: white;
+  font-size: 16px;
+  padding: 10px 32px;
+}
