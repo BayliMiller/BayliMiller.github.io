@@ -2,7 +2,21 @@
 text align centers the tabs on the page 
 list-style:none, removes bullet 
 
-*/
+
+html, body{
+height:100%;	
+}
+
+html {
+	display:table;
+	margin:auto;
+}
+
+body{
+	display:table-cell;
+	vertical-align:middle;
+}*/
+
 
 .tabs {
 	list-style-type: none;
@@ -10,7 +24,7 @@ list-style:none, removes bullet
 	margin:0;
 	position:relative;
 	text-align: center;
-	font-family:Segoe UI;
+	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
 	font-size:10pt;
 	
 }
@@ -61,11 +75,8 @@ Margin left gives my paragraph certain 'cm' away from left
 	display:none;
 	position:absolute;
 	text-align:justify;
-	margin-right:10cm;
-	margin-left:10cm;
-	width:800px;
-	
-
+	width:700px;
+	margin-left:25em;
 }
 
 
@@ -74,7 +85,9 @@ Margin left gives my paragraph certain 'cm' away from left
 green) when tab is selected*/
 
 .tabs li> input:checked + label {
-	color:red;
+	color:darkolivegreen;
+	font-size:14pt;
+	font-weight:400;
 }
 	
 .tabs li > input:checked ~ .tab-content {
@@ -146,7 +159,7 @@ div.sidebar {
     border:ridge;
     position:inherit;
     top:2%;
-   	margin-left:18cm;
+   	margin-left:15.5cm;
 }
 
 
@@ -157,13 +170,14 @@ h3 {
 }
 
 .container {
-  ;
+  position:relative;
   padding-right: 11em;
 }
 
 .timeline {
   position:relative;
   overflow: auto;
+  margin-left:inherit;
 }
 .timeline:before {
   content: '';
